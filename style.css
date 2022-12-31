@@ -508,8 +508,8 @@ p {
   transform: scale(1.2);
 }
 
+/* ---------------------------------------------------------------- */
 /* Form Survey */
-
 #survey {
   display: flex;
   flex-flow: row wrap;
@@ -596,8 +596,32 @@ input#mail:focus:invalid {
   background: url(images/validation/invalid.png) bottom right/contain no-repeat;
 }
 
+/* ---------------------------------------------------------------- */
 
-/* Mobile & Tablet Styles : below 769px screen width  */
+/* Scroll */
+.arrow-up {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 70px;
+  height: 70px;
+  font-size: 50px;
+  color: var(--color-white);
+  background-color: var(--color-blue);
+  border-radius: 50%;
+  /* display: none; -- cannot apply animation */
+  opacity: 0;
+  pointer-events: none;
+  transition: all var(--animation-duration) ease-in;
+}
+
+.arrow-up.visible {
+  /* display: block; -- cannot apply animation */
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Mobile & Tablet Styles : below 768px screen width  */
 @media screen and (max-width: 768px) {
   :root {
     /* Font size */
@@ -683,12 +707,4 @@ input#mail:focus:invalid {
     order: 1;
   }
 
-  .arrow-up {
-    width: 50px;
-    height: 50px;
-    font-size: 30px;
-    line-height: 50px;
-    right: 16px;
-    bottom: 16px;
-  }
 }
