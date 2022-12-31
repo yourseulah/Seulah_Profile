@@ -1,14 +1,28 @@
 /*  
-CSIS 1280 Project
-Seulah's Portfolio 
+CSIS 1280 + Personal Project 
+Seulah's Profile 
 Author : Seulah Lee
-Date: 2022-08-12
+Date: 2022-08-12 - 2022-12-31
 
 Filename : main.js
  */
 
 'use strict';
 
+
+const navbar = document.querySelector('#navbar');
+const navbarHeight = navbar.getBoundingClientRect().height;
+document.addEventListener('scroll', () => {
+  // console.log(window.scrollY);
+  // console.log(`navbarHeight: ${navbarHeight}`);
+  if(window.scrollY > navbarHeight) {
+    navbar.classList.add('navbar--dark')
+  } else {
+    navbar.classList.remove('navbar--dark')
+  }
+})
+
+/*
 // Handle scrolling when tapping on the navbar menu
 const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (event) => {
@@ -76,3 +90,4 @@ function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: 'smooth' });
 }
+*/
