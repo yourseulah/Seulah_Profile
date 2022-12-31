@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- 
+  CSIS 1280 Project
+  Seulah's Portfolio 
+  Author : Seulah Lee
+  Date: 2022-07-28
+
+  Filename : index.html
+  -->
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seulah's Portfolio</title>
+  <meta name="description" content = "Portfolio for Seulah Lee">
+  <meta name="author" content="Seulah">
+  <link rel="icon" type="image/png" href="images/favicon1.png">
+  <script src="https://kit.fontawesome.com/3bff057453.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer ></script>
+</head>
+
+<body>
+<!-- Navbar -->
+  <nav id="navbar">
+    <div class="nav__logo">
+      <a href="#"><img id="logo" src="images/favicon2.png" alt="logo" /></a> 
+    </div>
+    <div>
+      <ul class="navbar__menu">
+        <li class="navbar__menu__item active" data-link="#about">About</li>
+        <li class="navbar__menu__item" data-link="#skills">Skills</li>
+        <li class="navbar__menu__item" data-link="#work">My Work</li>
+        <li class="navbar__menu__item" data-link="#testimonials">Testimonials</li>
+        <li class="navbar__menu__item" data-link="#education">Education</li>
+        <li class="navbar__menu__item" data-link="#contact">Contact</li>
+      </ul>
+    </div>
+
+    <!-- Toggle button -->
+    <button class="navbar__toggle-btn">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </nav>
+
+<!-- Home -->
+  <section id="home">
+    <img src="images/profile.png" alt="My Profile photo" class="home__avatar">
+    <h1 class="home__title">Welcome! <br /> I am Seulah</h1>
+    <h2 class="home__description">An aspiring data analyst with full-stack capability</h2>
+    <button class="home__contact">Contact Me</button>
+  </section>
+
+<!-- About -->
+  <section id="about" class="section section__container">
+    <h1>About me</h1>
+      <p>Started as a logistic professional - analyzing rich datasets, implementing global processes, and solving problems. <br>
+      Desired to obtain ample experience in data analytics and continuosly develop technical skills.<br>
+      Relishing each step of the journey to grow into a well-rounded tech professional.<br>
+      Aside of my home country South Korea, lived in other countries including the US, China, and New Zealand. Currently reside in Canada.
+      Learned to adapt quickly in different environments and embrace diversity.<br>
+      Mental and physical health is the top priority. I enjoy exercising and laughing out loud.
+      </p>
+    <div class="about__majors">
+      <div class="major">
+        <div class="major__icon">
+          <i class="fa-brands fa-square-js"></i>
+        </div>
+        <h2 class="major__title">Front-End</h2>
+        <div class="major__description">
+          HTML, CSS, JavaScript
+          <br /> Bootstrap
+        </div>
+      </div>
+
+      <div class="major">
+        <div class="major__icon">
+          <i class="fa-solid fa-server"></i>
+        </div>
+        <h2 class="major__title">Back-End</h2>
+        <div class="major__description">
+          C#, Java, PHP
+          <br /> JSP, Spring
+        </div>
+      </div>
+
+      <div class="major">
+        <div class="major__icon">
+          <i class="fa-solid fa-database"></i>
+        </div>
+        <h2 class="major__title">Database</h2>
+        <div class="major__description">
+          Excel, MSSQL, MySQL
+        </div>
+      </div>
+    </div>
+
+    <div class="about__jobs">
+      <div class="job">
+        <img src="images/jobs/expeditors.png" alt="Expeditors" class="job__logo">
+        <div class="job__description">
+          <p class="job__name">Management Trainee</p>
+          <p class="job__period">2017 Nov - 2019 Jan</p>
+        </div>
+      </div>
+      <div class="job">
+        <img src="images/jobs/expeditors.png" alt="Expeditors" class="job__logo">
+        <div class="job__description">
+          <p class="job__name">Process Specialist</p>
+          <p class="job__period">2016 Sept - 2017 Nov</p>
+        </div>
+      </div>
+      <div class="job">
+        <img src="images/jobs/expeditors.png" alt="Expeditors" class="job__logo">
+        <div class="job__description">
+          <p class="job__name">Order Management Agent</p>
+          <p class="job__period">2015 Aug - 2016 Aug</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+<!-- Skills -->
+  <section id="skills" class="section">
+    <div class="section__container">
+      <h1>Skills</h1>
+      <p>Continuing to learn new technologies.
+        Capable of working independently and within a team environment. <br/>
+        Eager to experience all phases of software life-cycle and analytic tools.</p>
+      
+        <div class="skillset">
+          <div class="skillset__left">
+            <h3 class="skillset__title">Skills</h3>
+            <div class="skill">
+              <div class="skill__description">
+                <span>Java</span>
+                <span>60%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 60%;"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="skill__description">
+                <span>MSSQL/MySQL</span>
+                <span>60%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 60%;"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="skill__description">
+                <span>HTML/CSS</span>
+                <span>60%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 60%;"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="skill__description">
+                <span>JavaScript</span>
+                <span>20%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 20%;"></div>
+              </div>
+            </div>
+            <!-- <div class="skill">
+              <div class="skill__description">
+                <span>JAVA</span>
+                <span>20%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 20%;"></div>
+              </div>
+            </div> -->
+          </div>
+          <div class="skillset__right">
+            <div class="tools">
+              <h3 class="skillset__title">Tools</h3>
+              <ul class="tools__list">
+                <li><span>Visual Studio Code</span></li>
+                <li><span>Visual Studio</span></li>
+                <li><span>Eclipse</span></li>
+                <li><span>Tableau</span></li>
+              </ul>
+            </div>
+            <div class="etc">
+              <h3 class="skillset__title">Etc</h3>
+              <ul class="etc__list">
+                <li><span>Git</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+
+<!-- My Work -->
+  <section id="work" class="section section__container">
+    <h1>My work</h1>
+    <h3>Projects</h3>
+    <div class="work__categories">
+      <button class="category__btn active">All <span class="category__count">5</span></button>
+      <button class="category__btn">Front-end <span class="category__count">2</span></button>
+      <button class="category__btn">Back-end <span class="category__count">3</span></button>
+      <button class="category__btn">Mobile <span class="category__count">0</span></button>
+    </div>
+
+    <div class="work__projects">
+      <a href="#" class="project" data-type="front-end" target="_blank">
+        <img class="project__img" src="images/projects/preparing.png" alt="academy">
+        <div class="project__description">
+          <h3>Academy Site</h3>
+          <span>HTML, CSS with media query </span>
+        </div>
+      </a>
+      <a href="#" class="project" data-type="front-end" target="_blank">
+        <img class="project__img" src="images/projects/preparing.png" alt="netflix">
+        <div class="project__description">
+          <h3>Netflix</h3>
+          <span>Clone coding with HTML, CSS, JavaScript</span>
+        </div>
+      </a>
+      <a href="#" class="project" data-type="back-end" target="_blank">
+        <img class="project__img" src="images/projects/preparing.png" alt="memo">
+        <div class="project__description">
+          <h3>Memo App</h3>
+          <span>First backend project using hardcoding PHP and HTML/CSS</span>
+        </div>
+      </a>
+      <a href="#" class="project" data-type="back-end" target="_blank">
+        <img class="project__img" src="images/projects/preparing.png" alt="crm">
+        <div class="project__description">
+          <h3>CRM</h3>
+          <span>First full-stack project, using hardcoding PHP and Bootstrap</span>
+        </div>
+      </a>
+      <a href="#" class="project" data-type="back-end" target="_blank">
+        <img class="project__img" src="images/projects/preparing.png" alt="onlineshop">
+        <div class="project__description">
+          <h3>Online Shop</h3>
+          <span>Java spring MVC project - ShopAdmin/ShopMember</span>
+        </div>
+      </a>
+      
+    </div>
+  </section>
+
+<!-- Testimonials -->
+  <section id="testimonials" class="section">
+    <div class="section__container">
+      <h1>Tesimonials</h1>
+      <h3>Check out what they say about me</h3>
+      <div class="testimonials">
+        <div class="testimonial">
+          <img src="images/testimonial/UtkarshPrashar.png" alt="Avatar" class="testimonial__avatar">
+          <div class="testimonial__speech-bubble">
+            <p>Seulah is a student who keeps moving forward </p>
+            <p class="name"><a href="#">Utkarsh Prashar</a> / Student Assistant at Douglas College<p>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial__speech-bubble">
+            <p>I taught Database, and Seulah is a student who works hard to learn</p>
+            <p class="name"><a href="#">Saeed Mirjalili</a> / Professor at Douglas College</p>
+          </div>
+          <img src="images/testimonial/Saeed.jpeg" alt="Avatar" class="testimonial__avatar">
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Education -->
+  <section id="education" class="section section__container">
+    <h1>Education</h1>
+    <h2>Bachelors & Post-Baccalaurate Diploma</h2>
+    <p>Currently attending Douglas College and cultivating tech abilities</p>
+
+    <div class="postdiploma">
+      <div class="postdiploma__degree">
+        <span><b>Post-Baccalaurate Diploma</b></span>
+        <span><b>Douglas College</b></span> 
+        <span>Computer and Information Systems <br />
+        Data Analytics stream</span>
+        <span>May 2022 - Aug 2024</span>
+        <span>New Westminster BC, Canada</span>
+      </div>
+    </div>
+    <div class="bachelor">
+      <div class="bachelor__degree">
+        <span><b>Bachelor of Arts</b></span>
+        <span><b>Baldwin Wallace University</b></span>
+        <span>Major in International Business and Marketing<br />
+        Minor in Asian Studies</span> 
+        <span>May 2011 - July 2015</span>
+        <span>Berea OH, USA<span>
+      </div>
+    </div>
+
+  </section>
+
+<!-- Contact -->
+  <section id="contact" class="section">
+    <div class="section__container">
+      <h1 class="contact__title">Love to hear from you</h1>
+      <h2 class="contact__email">imseulahlee@gmail.com</h2>
+
+      <!-- <form id="survey" action="http://www.example.com/redball/survey" method="post">
+        <fieldset id="visitor">
+          <legend>Visitor Survey</legend>
+          <div class="formRow">
+            <label for="name">Name*</label>
+            <input name="visitor__name" id="name" type="text" placeholder="First and Last name" required />
+          </div>
+  
+          <div class="formRow">
+            <label for="mail">E-mail*</label>
+            <input name="visitor__email" id="mail" type="email" required />
+          </div>
+  
+          <div class="formRow">
+            <label for="info">Where did you hear about me?</label>
+            <select name="visitor__src" id="info">
+              <option value="bwu">Baldwin Wallace University</option>
+              <option value="douglas" selected>Douglas College</option>
+              <option value="work">Work</option>
+              <option value="linkedIn">LinkedIn</option>
+              <option value="social">Social Media</option>
+              <option value="reference">Friend Reference</option>
+            </select>
+          </div>
+  
+          <div class="formRow">
+            <label>Are you from Canada?</label>
+            <fieldset class="opts">
+              <label for="cYes">yes</label>
+              <input name="fCanada" id="cYes" value="yes" type="radio" />
+              <label for="pNo">No</label>
+              <input name="fCanada" id="cNo" value="no" type="radio" />
+            </fieldset>
+          </div>
+  
+          <div class="formRow">
+            <label for="rangeBox">How do you like about my profile page?
+              <br /> (0=not impressed😑 10=great😊)
+            </label>
+            <input name="visitor__rate" type="range" value="5" step="1" min="0" max="10" />
+          </div>
+  
+          <label for="textBox">Let me hear you</label>
+          <textarea name="thought" id="textBox" cols="30" rows="10"></textarea>
+        </fieldset>
+  
+        <div class="buttons">
+          <input type="submit" value="submit👍">
+          <input type="reset" value="reset🙅‍♀️">
+        </div>
+  
+      </form> -->
+      
+      <div class="contact__links">
+        <a href="https://github.com/yourseulah" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/seulahlee/" target="_blank">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <p class="contact__rights">
+          @ 2022 IAMSEULAH all rights reserved
+        </p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
