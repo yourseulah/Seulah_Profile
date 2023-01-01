@@ -411,16 +411,19 @@ p {
 }
 
 .project__description h3 {
-  color: var(--color-white);
+  color: var(--color-blue);
+  font-weight: bold;
 }
 
 .project__description h3:after {
   content: '';
   display: block;
   position: relative;
-  left: 45%;
-  width: 30px;
+  left: 50%;
+  width: 50px;
   height: 3px;
+  transform: translateX(-50%);
+  margin-top: 8px;
   background-color: var(--color-dark-white);
 }
 
@@ -517,7 +520,7 @@ p {
   transform: scale(1.2);
 }
 
-/* ---------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------- */
 /* Form Survey */
 #survey {
   display: flex;
@@ -604,8 +607,7 @@ input#name:focus:invalid,
 input#mail:focus:invalid {
   background: url(images/validation/invalid.png) bottom right/contain no-repeat;
 }
-
-/* ---------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------ */
 
 /* Scroll */
 .arrow-up {
@@ -651,13 +653,15 @@ input#mail:focus:invalid {
   #navbar {
     flex-direction: column;
     align-items: flex-start;
-    background-color: var(--color-pink);
+    
   }
 
   #navbar.navbar--dark {
-    padding: 16px;
+    padding: 6px;
   }
+
   .navbar__menu {
+    background-color: var(--color-violet);
     flex-direction: column;
     text-align: center;
     width: 100%;
