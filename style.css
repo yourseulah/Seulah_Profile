@@ -74,6 +74,8 @@ button {
   cursor: pointer;
   border: none;
   outline: none;
+  padding: 0; 
+  /* for iphone - need padding 0 */
 }
 
 /* Typograpahy */
@@ -159,7 +161,7 @@ p {
 .home__container {
   background: url('images/home.png') center/cover no-repeat;
   padding: 40px;
-  padding-top: 100px;
+  padding-top: 120px;
   text-align: center;
 }
 
@@ -680,6 +682,10 @@ input#mail:focus:invalid {
   .section {
     padding: 16px;
     padding-top: 40px;
+  }
+
+  .home__container {
+    padding-top: 100px;
   }
 
   .about__majors {
