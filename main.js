@@ -2,7 +2,7 @@
 CSIS 1280 + Personal Project 
 Seulah's Profile 
 Author : Seulah Lee
-Date: 2022-08-12 - 2022-12-31
+Date: 2022-08-12 - 
 
 Filename : main.js
  */

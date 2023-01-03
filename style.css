@@ -2,7 +2,7 @@
 CSIS 1280 + Personal Project 
 Seulah's Profile 
 Author : Seulah Lee
-Date: 2022-08-03 ~ 2022-12-31
+Date: 2022-08-03 -
 
 Filename : style.css
  */
@@ -156,10 +156,10 @@ p {
 }
 
 /* Home */
-#home {
+.home__container {
   background: url('images/home.png') center/cover no-repeat;
   padding: 40px;
-  padding-top: 250px;
+  padding-top: 100px;
   text-align: center;
 }
 
@@ -183,6 +183,10 @@ p {
   padding: 10px 12px;
   border: 1px solid var(--color-white);
   border-radius: var(--size-border-radius);
+}
+
+.home__contact:hover {
+  background-color: var(--color-violet);
 }
 
 /* Section common */
@@ -328,6 +332,7 @@ p {
   border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
   padding: 8px 48px;
+  position: relative;
 }
 
 .category__btn.selected,
@@ -344,9 +349,9 @@ p {
   height: 24px;
   display: inline-block;
   line-height: 24px;
-  position: relative;
-  top: -25px;
-  left: 5px;
+  position: absolute;
+  top: -20px;
+  right: 16px;
   opacity: 0;
   transition: all var(--animation-duration) ease-in;
 }
@@ -716,8 +721,23 @@ input#mail:focus:invalid {
     margin-bottom: 8px;
   }
 
+  /* base order : 0 , thurs speech bubble comes after avatar*/
   .testimonial__speech-bubble {
-    order: 1;
+    order: 1; 
   }
 
+  .bachelor, .postdiploma {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: var(--font-small);
+  }
+
+  .arrow-up {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    right: 16px;
+    bottom: 16px;
+  }
 }
