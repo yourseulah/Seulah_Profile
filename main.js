@@ -48,10 +48,7 @@ homeContactBtn.addEventListener('click', () => {
   scrollIntoViews('#contact');
 });
 
-function scrollIntoViews(selector) {
-  const scrollTo = document.querySelector(selector);
-  scrollTo.scrollIntoView({behavior: "smooth"});
-}
+
 
 //Make home content slowly fade to transparent as the window scrolls down
 const home = document.querySelector('.home__container');
@@ -108,7 +105,7 @@ workBtnContainer.addEventListener('click', (e) => {
   }, 300);
 
 
-  /* 2 other ways (same as forEach) :
+  /* two other ways (same as forEach) :
   console.log(`------------`);
   for (let project of projects) {
     console.log(project);
@@ -124,3 +121,73 @@ workBtnContainer.addEventListener('click', (e) => {
   
 });
 
+//1. Bring all the section items and corresponding menu items
+//2. Observe all the sections via IntersectionObserver
+//3. Activate menu items for the section showing on the window
+
+const sectionIds = [ 
+  '#home',
+  '#about', 
+  '#skills',
+  '#work',
+  '#testimonials',
+  '#education',
+  '#contact',
+];
+
+const sections = sectionIds.map(id => document.querySelector(id));
+const navItems = sectionIds.map(id => 
+  document.querySelector(`[data-link="${id}"]`)
+);
+// console.log(sections);
+// console.log(navItems);
+
+
+let selectedNavIndex;
+let selectedNavItem = navItems[0];
+function selectNavItem(selected) {
+  selectedNavItem.classList.remove('active');
+  selectedNavItem = selected;
+  selectedNavItem.classList.add('active');
+}
+
+function scrollIntoViews(selector) {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({behavior: 'smooth'});
+  selectNavItem(navItems[sectionIds.indexOf(selector)]);
+}
+
+const observerOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.4,
+};
+
+const observerCallback = (entries, observer) => {
+  entries.forEach(entry => {
+    if(!entry.isIntersecting && entry.intersectionRatio > 0) {
+      const index = sectionIds.indexOf(`#${entry.target.id}`);
+      //console.log(index, entry.target.id);
+      
+      // .y means the page goes up as scrolling down
+      if(entry.boundingClientRect.y < 0) {
+        selectedNavIndex = index + 1; //select +1 page that comes after the page as scrolling down
+      } else { 
+        selectedNavIndex = index - 1; //select -1 page that comes before the page as scrolling up
+      }
+    }
+    //console.log(entry.target);
+  });
+};
+
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+sections.forEach(section =>observer.observe(section));
+
+window.addEventListener('wheel', () => { //user scroll : wheel
+  if(window.scrollY === 0) { // the first
+    selectedNavIndex = 0;
+  } else if (window.scrollY + window.innerHeight === document.body.clientHeight) {  // the last
+    selectedNavIndex = navItems.length -1;
+  }
+  selectNavItem(navItems[selectedNavIndex]);
+});

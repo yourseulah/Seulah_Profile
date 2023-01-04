@@ -143,6 +143,10 @@ p {
   border-radius: var(--size-border-radius);
 }
 
+.navbar__menu__item.active {
+  border: 1px solid var(--color-white);
+}
+
 .navbar__menu__item:hover {
   border: 1px solid var(--color-white);
   background-color: var(--color-violet);
@@ -161,7 +165,7 @@ p {
 .home__container {
   background: url('images/home.png') center/cover no-repeat;
   padding: 40px;
-  padding-top: 120px;
+  padding-top: 250px;
   text-align: center;
 }
 
@@ -483,7 +487,7 @@ p {
 .bachelor, .postdiploma {
   background-color: var(--color-light-white);
   color: var(--color-dark-grey);
-  margin-top: 20px;
+  margin-top: 30px;
   padding: 20px 40px;
   font-size: var(--font-regular);
 }
@@ -513,7 +517,7 @@ p {
 
 .contact__links {
   font-size: var(--font-large);
-  margin: 24px 0;
+  margin: 50px 0;
 }
 
 .contact__links i:hover {
