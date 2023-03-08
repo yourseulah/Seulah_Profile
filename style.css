@@ -483,7 +483,12 @@ p {
   color: var(--color-violet);
 }
 
+.testimonial__speech-bubble a:hover {
+  color: var(--color-blue);
+}
+
 /* Education */
+
 .bachelor, .postdiploma {
   background-color: var(--color-light-white);
   color: var(--color-dark-grey);
@@ -498,6 +503,13 @@ p {
   justify-content: space-between;
 }
 
+.bachelor a, .postdiploma a {
+  color: var(--color-violet);
+}
+
+.bachelor a:hover, .postdiploma a:hover {
+  color: var(--color-blue);
+}
 
 /* Contact */
 
